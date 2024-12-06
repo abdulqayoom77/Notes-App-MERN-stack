@@ -20,20 +20,19 @@ dotenv.config();
 // Initialize Express App
 const app = express();
 
-// Load Configuration
-const configPath = path.resolve("config.json");
-const config = JSON.parse(fs.readFileSync(configPath, "utf-8"));
-
 // Connect to MongoDB
 const connectToDatabase = async () => {
   try {
-    await mongoose.connect(config.connectionString);
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log("Connected to MongoDB successfully");
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
-    process.exit(1);
+    process.exit(1); 
   }
 };
+
+connectToDatabase();
+
 connectToDatabase();
 
 // Middleware
