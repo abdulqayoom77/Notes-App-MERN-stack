@@ -1,0 +1,3 @@
+{
+    "connectionString":"mongodb+srv://admin:admin@todo-app.ng2fz.mongodb.net/?retryWrites=true&w=majority&appName=todo-app"
+}

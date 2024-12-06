@@ -1,0 +1,22 @@
+# Ignore node_modules in backend and frontend
+/backend/node_modules/
+/frontend/node_modules/
+
+# Ignore environment files (optional, sensitive data)
+*.env
+
+# Ignore build folders
+/build
+/dist
+
+# Ignore logs
+*.log
+
+# Ignore dependency directories that might be created
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore system files (macOS, Windows)
+.DS_Store
+Thumbs.db
