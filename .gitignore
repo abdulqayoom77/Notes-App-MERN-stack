@@ -20,3 +20,6 @@ yarn-error.log*
 # Ignore system files (macOS, Windows)
 .DS_Store
 Thumbs.db
+
+# Do not ignore config.json (explicitly un-ignore)
+!config.json
