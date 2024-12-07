@@ -6,7 +6,7 @@ import SignUp from "./pages/SignUp";
 
 const App = () => {
   return (
-    <Router basename="/">
+    <Router>
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
