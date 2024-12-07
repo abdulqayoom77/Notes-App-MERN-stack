@@ -21,12 +21,11 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
 
   const onClearSearch = () => {
     setSearchQuery("");
-    handleClearSearch()
+    handleClearSearch();
   };
 
-  const shouldShowProfileInfo = !["/login", "/signup"].includes(
-    location.pathname
-  );
+  const shouldShowProfileInfo =
+    !["/login", "/signup"].includes(location.pathname);
 
   return (
     <div className="bg-white flex items-center justify-between px-6 py-2 drop-shadow">
@@ -37,9 +36,9 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
         handleSearch={handleSearch}
         onClearSearch={onClearSearch}
       />
-      {shouldShowProfileInfo && (
+      {shouldShowProfileInfo ? (
         <ProfileInfo userInfo={userInfo} logout={onLogout} />
-      )}
+      ) : null}
     </div>
   );
 };
